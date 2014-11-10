@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+
+      <dl>
+        <dt>Title:
+        <dd><span id="news_title">{{ title }}</span>
+        {% if author %}
+        <dt>Author:
+        <dd><span id="news_author">{{ author }}</span>
+        {% endif %}
+        {% if pub_time %}
+        <dt>Published Time:
+        <dd><span id="news_time">{{ pub_time }}</span>
+        {% endif %}
+        <dt>Content:
+        <dd><span id="news_content">{{ content }}</span>
+      </dl>
+
+{% endblock %}
