@@ -1,13 +1,15 @@
 from flask import Flask
+from flask import render_template
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World! Test Deploy"
+    return render_template("ready.html", url=None)
 
-@app.route("/test/")
-def test():
-    return "TEST ASS"
+@app.route("/add", methods=['POST'])
+def execute_parse():
+    pass
+
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
