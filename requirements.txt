@@ -1,3 +1,5 @@
 flask
 newsParser
 gunicorn
+requests
+beautifulsoup4
